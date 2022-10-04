@@ -1,6 +1,6 @@
 # Harbor Testnet with One Chain and One Off-Chain Actor
 
-This is to demosntrate configuring, building and running a sample Testnet. Clone this repo and follow along.
+This is to demosntrate configuring, building and running a sample Testnet with one chain and two actors. Clone this repo and follow along.
 
 ## Copy API Key
 
