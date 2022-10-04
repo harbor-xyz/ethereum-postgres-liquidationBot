@@ -81,8 +81,8 @@ These are your running processes and their ports
 ethereum
 3.91.12.13:4000
 
-actor-name
-3.91.12.13:4001
+liquidationBot
+3.91.12.13:3000
 ```
 
 You can now interact with them using the endpoints.
