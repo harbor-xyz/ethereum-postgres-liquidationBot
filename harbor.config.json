@@ -1,0 +1,29 @@
+{
+    "config": {
+      "name": "example-testnet"
+    },
+    "chains": [
+      {
+        "chain": "ethereum",
+        "config": {
+          "artifactsPath": "./artifacts",
+          "deploy": {
+            "scripts": "./deploy",
+            "includes": ["./node-modules", "./libraries/sample-library-1"]
+          },
+          "environmentFile": "./.env",
+          "afterDeploy": {
+            "location": "./deployment/scripts"
+          }
+        }
+      }
+    ],
+    "offChainActors": [
+      {
+        "dockerfile": "./actor-dir/Dockerfile",
+        "buildPath": "./actor-dir/build.sh",
+        "name": "graph-ql-node",
+        "port": 3000
+      }
+    ]
+  }
