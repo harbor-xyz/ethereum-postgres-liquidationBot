@@ -1,6 +1,6 @@
 {
     "config": {
-      "name": "example-testnet"
+      "name": "testnet-one-chain-one-actor"
     },
     "chains": [
       {
@@ -8,22 +8,20 @@
         "config": {
           "artifactsPath": "./artifacts",
           "deploy": {
-            "scripts": "./deploy",
-            "includes": ["./node-modules", "./libraries/sample-library-1"]
+            "scripts": "./deploy"
           },
-          "environmentFile": "./.env",
           "afterDeploy": {
-            "location": "./deployment/scripts"
+            "location": "./afterDeploy"
           }
         }
       }
     ],
     "offChainActors": [
       {
-        "dockerfile": "./actor-dir/Dockerfile",
-        "buildPath": "./actor-dir/build.sh",
-        "name": "graph-ql-node",
-        "port": 3000
+        "dockerfile": "./offChain/liquidation-bot-1/Dockerfile",
+        "buildPath": "./offChain/liquidation-bot-1",
+        "name": "liquidationBot",
+        "ports": [3000]
       }
     ]
   }
