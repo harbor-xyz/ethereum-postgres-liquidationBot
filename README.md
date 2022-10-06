@@ -1,6 +1,6 @@
-# Harbor Testnet with One Chain and One Off-Chain Actor
+# Harbor Testnet with One Chain (Ethereun) and Two Off-Chain Actors (Postgres and Liquidation bot)
 
-This is to demosntrate configuring, building and running a sample Testnet with one chain and one locally built actor. Clone this repo and follow along.
+This is to demosntrate configuring, building and running a sample Testnet with one chain (Ethereum) and two actors (Postgres and Liquidation bot). Clone this repo and follow along.
 
 ## Copy API Key
 
@@ -80,6 +80,9 @@ At the end of the logs, you should see your chain and off-chain actors with endp
 These are your running processes and their ports
 ethereum
 3.91.12.13:4000
+
+postgres
+3.91.12.13:5432
 
 liquidationBot
 3.91.12.13:3000
