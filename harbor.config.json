@@ -28,7 +28,13 @@
         "name": "postgres1337",
         "ports": [
           5432
-        ]
+        ],
+        "command": "postgres -cshared_preload_libraries=pg_stat_statements",
+        "environment": {
+          "POSTGRES_USER": "graph-node",
+          "POSTGRES_PASSWORD": "let-me-in",
+          "POSTGRES_DB": "graph-node"
+        }
       }
     ]
   }
