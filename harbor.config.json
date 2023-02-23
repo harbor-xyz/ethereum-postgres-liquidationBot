@@ -1,40 +1,39 @@
 {
-    "chains": [
-      {
-        "chain": "ethereum",
-        "config": {
-          "artifactsPath": "./artifacts",
-          "deploy": {
-            "scripts": "./deploy"
-          },
-          "afterDeploy": {
-            "location": "./afterDeploy"
-          }
-        },
-        "tag": "tag-1"
-      }
-    ],
-    "offChainActors": [
-      {
-        "dockerfile": "./offChain/liquidation-bot-1/Dockerfile",
-        "buildPath": "./offChain/liquidation-bot-1",
-        "name": "liquidationBot",
-        "ports": [3000],
-        "tag": "tag-1"
-      }, 
-      {
-        "image": "postgres",
-        "name": "postgres1337",
-        "ports": [
-          5432
-        ],
-        "command": "postgres -cshared_preload_libraries=pg_stat_statements",
-        "environment": {
-          "POSTGRES_USER": "graph-node",
-          "POSTGRES_PASSWORD": "let-me-in",
-          "POSTGRES_DB": "graph-node"
-        },
-        "tag": "tag-1"
-      }
-    ]
-  }
+  "chains": [
+    {
+      "chain": "ethereum",
+      "config": {
+        "artifactsPath": "./artifacts",
+        "deploy": {
+          "scripts": "./deploy"
+        }
+      },
+      "tag": "tag-1"
+    }
+  ],
+  "offChainActors": [
+    {
+      "dockerfile": "./offChain/liquidation-bot-1/Dockerfile",
+      "buildPath": "./offChain/liquidation-bot-1",
+      "name": "liquidationBot",
+      "ports": [
+        3000
+      ],
+      "tag": "tag-1"
+    },
+    {
+      "image": "postgres",
+      "name": "postgres1337",
+      "ports": [
+        5432
+      ],
+      "command": "postgres -cshared_preload_libraries=pg_stat_statements",
+      "environment": {
+        "POSTGRES_USER": "graph-node",
+        "POSTGRES_PASSWORD": "let-me-in",
+        "POSTGRES_DB": "graph-node"
+      },
+      "tag": "tag-1"
+    }
+  ]
+}
